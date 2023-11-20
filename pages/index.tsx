@@ -4,9 +4,6 @@ import clsx from "clsx";
 import CardPreview, {
   CardPreviewProps,
 } from "../components/sections/CardPreview";
-import { useRouter } from "next/router";
-
-const cardPreviewSectionId = "cardPreviewSectionId";
 
 const folderList: CardPreviewProps[] = [
   {
@@ -60,7 +57,7 @@ const folderList: CardPreviewProps[] = [
 ];
 
 const Home: NextPage = () => {
-  const cardSectionElement = useRef<HTMLElement>();
+  const cardSectionElement = useRef<HTMLElement>(null);
   const [isScrollDownButtonShown, setIsScrollDownButtonShown] = useState(true);
 
   const handleScroll = () => {
