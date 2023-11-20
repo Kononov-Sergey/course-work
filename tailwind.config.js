@@ -6,11 +6,17 @@ module.exports = {
   ],
   theme: {
     colors: {
-      "block-gray": "#eff0f3",
-      "main-black": "#0d0d0d",
-      "paragraph-text": "#2a2a2a",
-      btn: "#ff8e3c",
-      tetriary: "#d9376e",
+      "color-main-bg": "#fffffe",
+      "color-secondary-bg": "#d1d1e9",
+      "color-headline": "#094067",
+      "color-card-headline": "#1f1135",
+      "color-paragraph": "#5f6c7b",
+      "color-card-paragraph": "#1b1325",
+      "color-button-bg": "#3da9fc",
+      "color-button-text": "#fffffe",
+      "color-stroke": "#094067",
+      "color-tertiary": "#e45858",
+      "color-card-bg": "#e2daeb",
     },
     fontFamily: {
       mulish: ["Mulish"],

@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d89ebce2-0313-4f02-afbe-052a2f4b8c72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/sections/CardPreview.tsx" afterDir="false" />
+    <list default="true" id="03373bd5-cb55-4376-a07b-30fcd036517d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/course-work.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/works/[work-id].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/expand-more-arrow.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/CardPreview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/CardPreview.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +31,10 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
   "associatedIndex": 1
 }]]></component>
-  <component name="ProjectId" id="2YJ9WdVrKUUrFyAfdvD8RutpfbX" />
+  <component name="ProjectId" id="2YRbzLxnBRNmf3o4Dzy8sKydrjm" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -36,13 +47,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/sergey.kononov/git/course-work",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/sergey.kononov/git/course-work/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "/Users/sergey.kononov/git/course-work/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -50,12 +61,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d89ebce2-0313-4f02-afbe-052a2f4b8c72" name="Changes" comment="" />
-      <created>1700232847850</created>
+      <changelist id="03373bd5-cb55-4376-a07b-30fcd036517d" name="Changes" comment="" />
+      <created>1700491604718</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1700232847850</updated>
-      <workItem from="1700232848905" duration="2224000" />
+      <updated>1700491604718</updated>
+      <workItem from="1700491609107" duration="3629000" />
     </task>
     <servers />
   </component>
