@@ -1,11 +1,8 @@
 import { FC, PropsWithChildren } from "react";
 import Link from "next/link";
+import { CardPreviewInfo } from "../../shared/pages-info";
 
-export interface CardPreviewProps {
-  title: string;
-  href: string;
-  text?: string[];
-}
+interface CardPreviewProps extends CardPreviewInfo {}
 
 const CardPreview: FC<PropsWithChildren<CardPreviewProps>> = ({
   href,
@@ -24,9 +21,6 @@ const CardPreview: FC<PropsWithChildren<CardPreviewProps>> = ({
       </div>
     </Link>
   );
-};
-CardPreview.defaultProps = {
-  text: [],
 };
 
 export default CardPreview;
