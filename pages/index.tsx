@@ -1,18 +1,32 @@
 import React, { useEffect, useRef, useState } from "react";
 import type { NextPage } from "next";
 import clsx from "clsx";
+import { useAtom } from "jotai";
+
 import pagesInfo from "../shared/pages-info";
 import CardPreview from "../components/sections/CardPreview";
+import { isMainPageWasVisited } from "../store/global";
 
 const Home: NextPage = () => {
   const cardSectionElement = useRef<HTMLElement>(null);
   const [isScrollDownButtonShown, setIsScrollDownButtonShown] = useState(true);
 
+  const [isFirstPageWasVisited, setIsFirstPageWasVisited] =
+    useAtom(isMainPageWasVisited);
+
   const handleScroll = () => {
+    if (window.scrollY >= window.innerHeight && !isFirstPageWasVisited) {
+      setIsFirstPageWasVisited(true);
+    }
+
     setIsScrollDownButtonShown(window.scrollY < 100);
   };
 
   useEffect(() => {
+    if (isFirstPageWasVisited) {
+      cardSectionElement.current?.scrollIntoView();
+    }
+
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
@@ -55,7 +69,10 @@ const Home: NextPage = () => {
         ref={cardSectionElement}
         className="min-w-screen min-h-screen flex items-center justify-center bg-color-secondary-bg p-8"
       >
-        <div className="container mx-auto flex flex-col justify-center gap-8 ">
+        <div
+          id="link-content"
+          className="container mx-auto flex flex-col justify-center gap-8 "
+        >
           {pagesInfo.map(({ href, title, text }) => {
             return (
               <CardPreview

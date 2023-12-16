@@ -1,28 +1,52 @@
 import { FC, PropsWithChildren } from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
-import workMap from "../../shared/work-map";
-import { NamePages } from "../../shared/pages-info";
+import pagesInfo, { NamePages } from "../../shared/pages-info";
 
 interface WorkPageProps {}
 
 const WorkPage: FC<PropsWithChildren<WorkPageProps>> = () => {
   const router = useRouter();
 
-  const currentPage = router.query["work-id"] as NamePages;
+  const currentPageHref = router.query["work-id"] as NamePages;
+  const pageInfo = pagesInfo.find((page) => page.href === currentPageHref);
+
+  const onBackButtonClickHandler = () => {
+    router.back();
+  };
+
   return (
-    <main>
-      {router.query["work-id"]}
-      {workMap.get(currentPage)?.map((workInfo) => {
-        const fileSrc = `/work-result/${currentPage}/${workInfo.ref}`;
+    <main className="container mx-auto">
+      <header>
+        <button onClick={onBackButtonClickHandler} type="button">
+          Назад
+        </button>
+        <h1>{pageInfo?.title}</h1>
+      </header>
+
+      {!pageInfo && <h2>Нет данных о данной работе</h2>}
+
+      {pageInfo?.workInfo.map((workInfo) => {
+        const fileSrc = `/work-result/${currentPageHref}/${workInfo.ref}`;
 
         if (workInfo.type === "image") {
-          return <Image src={fileSrc} width={300} height={100} />;
+          return (
+            <img
+              key={workInfo.ref}
+              alt={workInfo.ref}
+              className="object-contain"
+              src={fileSrc}
+            />
+          );
         }
 
         if (workInfo.type === "doc") {
           return (
-            <a href={fileSrc} target="_blank" rel="noopener noreferrer">
+            <a
+              key={workInfo.ref}
+              href={fileSrc}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Скачать {workInfo.ref}
             </a>
           );

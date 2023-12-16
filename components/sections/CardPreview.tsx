@@ -15,7 +15,7 @@ const CardPreview: FC<PropsWithChildren<CardPreviewProps>> = ({
         <h2 className="font-bold text-2xl text-color-card-headline">{title}</h2>
         <ul className="list-disc list-inside text-color-card-paragraph">
           {text?.map((item) => (
-            <li>{item}</li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
       </div>
