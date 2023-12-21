@@ -94,6 +94,7 @@ const Home: NextPage = () => {
             className="underline hover:text-color-headline"
             target="_blank"
             href="https://t.me/Sergei_Kononov"
+            rel="noreferrer"
           >
             Кононов Сергей
           </a>
