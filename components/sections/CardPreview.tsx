@@ -1,8 +1,10 @@
 import { FC, PropsWithChildren } from "react";
 import Link from "next/link";
-import { CardPreviewInfo } from "../../shared/pages-info";
+import { CardPreviewInfo, NamePages } from "../../shared/pages-info";
 
-interface CardPreviewProps extends CardPreviewInfo {}
+interface CardPreviewProps extends Omit<CardPreviewInfo, "href" | "workInfo"> {
+  href: `/works/${NamePages}`;
+}
 
 const CardPreview: FC<PropsWithChildren<CardPreviewProps>> = ({
   href,
